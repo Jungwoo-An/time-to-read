@@ -1,14 +1,21 @@
 {
   "name": "time-to-read",
   "version": "1.0.0",
+  "scripts": {
+    "build": "rollup --config"
+  },
+  "author": "Jungwoo-An <o1o9814@naver.com>",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Jungwoo-An/time-to-read.git"
   },
-  "author": "Jungwoo-An <o1o9814@naver.com>",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Jungwoo-An/time-to-read/issues"
   },
-  "homepage": "https://github.com/Jungwoo-An/time-to-read#readme"
+  "homepage": "https://github.com/Jungwoo-An/time-to-read#readme",
+  "devDependencies": {
+    "rollup": "^1.2.1",
+    "rollup-plugin-uglify": "^6.0.2"
+  }
 }
