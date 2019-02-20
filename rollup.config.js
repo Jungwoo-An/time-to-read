@@ -1,15 +1,22 @@
 import { uglify } from 'rollup-plugin-uglify';
 
-export default {
-  input: 'lib/time-to-read.js',
-  output: {
-    file: 'dist/time-to-read.js',
-    name: 'time-to-read',
-    format: 'umd',
-  },
-  plugins: [
+const isMinify = typeof process.env.NODE_ENV !== 'undefined' && process.env.NODE_ENV === 'minify';
+const plugins =
+  (isMinify && [
     uglify({
       sourcemap: true,
     }),
-  ],
+  ]) ||
+  [];
+
+const file = (isMinify && 'dist/time-to-read.min.js') || 'dist/time-to-read.js';
+
+export default {
+  input: 'lib/time-to-read.js',
+  output: {
+    file,
+    name: 'timeToRead',
+    format: 'umd',
+  },
+  plugins: [...plugins],
 };
