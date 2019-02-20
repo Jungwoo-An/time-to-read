@@ -4,6 +4,7 @@
   "description": "A lightweight (1kB) Estimate time to read (support cjk)",
   "main": "dist/time-to-read.js",
   "module": "lib/time-to-read.js",
+  "typings": "time-to-read.d.ts",
   "scripts": {
     "build:prod": "rollup --config",
     "build:minify": "cross-env NODE_ENV=minify rollup --config",
